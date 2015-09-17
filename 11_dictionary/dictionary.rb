@@ -21,6 +21,15 @@ class Dictionary
 		end
 	end	
 
+	def printable
+		res = ""
+		keywords.each do |key|
+			value = @entries[key]
+			res << "[#{key}] \"#{value}\"\n"
+		end
+		res.strip
+	end
+
 	def add(elem)
 		elem.class == Hash ? @entries.merge!(elem) : @entries.store(elem, nil)
 	end
