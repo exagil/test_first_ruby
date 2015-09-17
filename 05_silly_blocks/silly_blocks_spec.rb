@@ -1,6 +1,5 @@
 # # Topics
-#
-# * blocks
+#* blocks
 # * closures
 # * yield
 # * loops
