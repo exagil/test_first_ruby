@@ -11,7 +11,12 @@ class RPNCalculator
 	def plus
 		element = @list.pop + @list.pop
 		@list.push element
-		element
+	end
+
+	def minus
+		last_element = @list.pop
+		second_last_element = @list.pop
+		@list.push (second_last_element - last_element)
 	end
 
 	def value
