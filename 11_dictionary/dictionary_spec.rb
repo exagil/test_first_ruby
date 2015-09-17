@@ -52,7 +52,7 @@ describe Dictionary do
   it 'finds nothing if the prefix matches nothing' do
     @d.add('fiend')
     @d.add('great')
-    expect(@d.find('nothing')) be_empty
+    expect(@d.find('nothing')).to be_empty
   end
 
   it "finds an entry" do
