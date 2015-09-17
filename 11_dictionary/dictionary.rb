@@ -5,8 +5,12 @@ class Dictionary
 	def entries
 		@entries
 	end
-	
-	def add
+	def keywords
+		@entries.keys.sort
 	end
 
-end
+	def add(elem)
+		@entries.merge!(elem)
+	end
+
+	end
