@@ -13,10 +13,12 @@ class String
 	# move_consonants_to_last
 	# returns [chopped_word, consonants]
 	def move_consonants_to_last
+		self.last
 		vowels = ['a', 'e', 'i', 'o', 'u']
+		capital_flag = (self[0].upcase == self[0])
 		res = self
 		while ! vowels.include? res[0]
-			if res.length >= 1 && (res[0] + res[1]) == 'qu'
+			if res.length >= 1 && (res[0] + res[1]).downcase == 'qu'
 				res  << 'qu'
 				res = res[2...res.length]
 			else
@@ -24,7 +26,8 @@ class String
 				res = res[1...res.length]
 			end
 		end
-		res
+		res << 'ay'
+		capital_flag ? res.capitalize! : res
 	end
 end
 
@@ -34,5 +37,4 @@ end
 
 def translate_word word
 	word = word.move_consonants_to_last unless word.begins_with_vowel?
-	word << 'ay'
 end
