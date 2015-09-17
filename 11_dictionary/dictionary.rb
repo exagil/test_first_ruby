@@ -5,4 +5,8 @@ class Dictionary
 	def entries
 		@entries
 	end
+	
+	def add
 	end
+
+end
