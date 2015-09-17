@@ -10,7 +10,7 @@ class Dictionary
 	end
 
 	def add(elem)
-		@entries.merge!(elem)
+		elem.class == Hash ? @entries.merge!(elem) : @entries.store(elem, nil)
 	end
 
 	end
