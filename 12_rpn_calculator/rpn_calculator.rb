@@ -19,6 +19,18 @@ class RPNCalculator
 		@list.push (second_last_element - last_element)
 	end
 
+	def divide
+		last_element = @list.pop
+		second_last_element = @list.pop
+		@list.push (second_last_element / last_element.to_f)
+	end
+
+	def times
+		last_element = @list.pop
+		second_last_element = @list.pop
+		@list.push (second_last_element * last_element)
+	end
+
 	def value
 		@list.last
 	end
