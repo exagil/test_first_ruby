@@ -11,9 +11,14 @@ class Dictionary
 	def include?(elem)
 		keywords.include? elem
 	end
-	def find(element)
-		return {} if @entries[element].nil?
-		@entries.select{|a| a.match(element)}
+
+	def find(elem)
+		found_elements = @entries.select{|a| a.match(elem)}
+		if found_elements.length > 0
+			found_elements
+		else
+			{}
+		end
 	end	
 
 	def add(elem)
