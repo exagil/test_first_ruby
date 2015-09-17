@@ -1,4 +1,6 @@
-RSpec.configure do |c|
-  c.fail_fast = true
-  c.color = true
+RSpec.configure do |config|
+  config.fail_fast = true
+  # config.failure_color = :magenta
+  # config.tty = true
+  # config.color = true
 end
