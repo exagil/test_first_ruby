@@ -39,4 +39,14 @@ class RPNCalculator
 		@list.last
 	end
 
+	def tokens string
+		string.split(' ').map do |element|
+			if element == '+' || element == '-' || element == '*' || element == '/'
+				element.to_sym
+			else
+				element.to_i
+			end
+		end
+	end
+
 end
