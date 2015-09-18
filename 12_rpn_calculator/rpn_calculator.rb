@@ -48,5 +48,24 @@ class RPNCalculator
 			end
 		end
 	end
+	def evaluate(input)
+		tokens(input).each do |elem|
+			if (elem.is_a? Integer)
+				self.push(elem)
+			else
+				case elem
+				when :+
+					self.plus
+				when :-
+					self.minus
+				when :*
+					self.times
+				else
+					self.divide
+				end
+			end
+		end
+			self.value
+	end
 
 end
