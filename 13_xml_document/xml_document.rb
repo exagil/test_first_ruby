@@ -1,17 +1,13 @@
 class XmlDocument
-	def hello(name: nil,&block)
-		if name
-			"<hello name='#{name}'/>"
+	def method_missing(name, **args, &block)
+		if block
+			"<#{name}>#{ block.call }</#{name}>"
 		else
-			if block
-			"<hello>#{block.call}</hello>" 
+			if args.any?
+				"<#{name} #{args.keys[0]}='#{args[args.keys[0]]}'/>"
 			else
-			"<hello/>"
+				"<#{name}/>"
+			end
 		end
-		end
-	end
-
-	def method_missing(name, *args)
-		"<#{name}/>"
 	end
 end
