@@ -6,4 +6,8 @@ class XmlDocument
 			"<hello/>"
 		end
 	end
+
+	def method_missing(name, *args)
+		"<#{name}/>"
+	end
 end
