@@ -21,6 +21,12 @@ class Fixnum
 			'eight'
 		when 9
 			'nine'
+		when 10
+			'ten'
+		when 11
+			'eleven'
+		when 12
+			'twelve'
 		end
 	end
 end
