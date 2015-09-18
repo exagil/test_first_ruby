@@ -1,5 +1,5 @@
 class Array
 	def sum
-		0
+		self.inject(0){|sum, num| sum += num}
 	end
 end
