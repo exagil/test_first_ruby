@@ -17,7 +17,7 @@
 #
 #
 
-require "temperature"
+require "10_temperature_object/temperature"
 
 describe Temperature do
 

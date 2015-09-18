@@ -5,7 +5,7 @@
 # * loops
 #
 
-require "silly_blocks"
+require "05_silly_blocks/silly_blocks"
 
 describe "some silly block functions" do
 

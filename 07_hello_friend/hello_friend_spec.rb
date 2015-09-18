@@ -88,7 +88,7 @@
 #
 #
 
-require "friend"
+require "07_hello_friend/friend"
 
 describe Friend do
   it "says hello" do

@@ -13,7 +13,7 @@ class String
 	# move_consonants_to_last
 	# returns [chopped_word, consonants]
 	def move_consonants_to_last
-		self.last
+		# self.last
 		vowels = ['a', 'e', 'i', 'o', 'u']
 		capital_flag = (self[0].upcase == self[0])
 		res = self
@@ -36,5 +36,5 @@ def translate(sentence)
 end
 
 def translate_word word
-	word = word.move_consonants_to_last unless word.begins_with_vowel?
+	word = word.move_consonants_to_last
 end

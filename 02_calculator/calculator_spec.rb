@@ -33,7 +33,7 @@
 #
 #
 
-require "calculator"
+require "02_calculator/calculator"
 
 describe "add" do
   it "adds 0 and 0" do
